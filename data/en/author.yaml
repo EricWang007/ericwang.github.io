@@ -1,0 +1,15 @@
+# some information about you
+name: "Eric Wang"
+nickname: "Eric"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: "images/author/冈崎朋也.jpg"
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "2018211947@bupt.edu.cn"
+
+# some summary about what you do
+summary:
+  - I am currently an undergraduate student at BUPT
+  - I major in computer science
+  - I love photograph
