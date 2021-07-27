@@ -1,2 +1,2 @@
-# ericwang007.github.io
+# EricWang's Blog
 Welcome to my personal blog!:smiley:
