@@ -1,2 +1,2 @@
 # ericwang007.github.io
-My personal blog :)
+Welcome to my personal blog!:smiley:
