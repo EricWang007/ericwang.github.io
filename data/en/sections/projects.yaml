@@ -1,0 +1,47 @@
+# section information
+section:
+  name: Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+buttons:
+- name: All
+  filter: "all"
+- name: Professional
+  filter: "professional"
+- name: Schoolwork
+  filter: "schoolwork"
+- name: Hobby
+  filter: "hobby"
+
+projects:
+- name: BUPT-News
+  # logo: images/projects/kubernetes.png
+  role: Contributor
+  timeline: "March 2021 - June 2021"
+  repo: https://github.com/EricWang007/BUPT-News
+  # url: ""
+  summary: A searching engine of BUPT's news developed by Python.
+  tags: ["Schoolwork", "All"]
+
+- name: P2C Compiler
+  # logo: images/projects/kubernetes.png
+  role: Contributor
+  timeline: "March 2021 - May 2021"
+  repo: https://github.com/EricWang007/BUPT-News
+  # url: ""
+  summary: A Pascal to C Compiler developed by C++.
+  tags: ["Schoolwork", "All"]
+
+- name: DNS-Server
+  # logo: images/projects/kubernetes.png
+  role: Contributor
+  timeline: "August 2020 - September 2020"
+  repo: https://github.com/ztqakita/DNS-Server
+  # url: ""
+  summary: Yet another DNS-Server developed by C.
+  tags: ["Schoolwork", "All"]
