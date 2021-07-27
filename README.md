@@ -1,2 +1,3 @@
 # EricWang's Blog
-Welcome to my personal blog! :smiley:
+Welcome to my personal blog：https://ericwang007.github.io/ 
+:smiley:
