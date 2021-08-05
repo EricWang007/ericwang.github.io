@@ -24,7 +24,7 @@ menu:
 
 * Variational Autoencoders(VAE):
 
-  <img src="/images/posts/GAN/image-20210327231211755.png" alt="image-20210327231211755" style="zoom:67%;" /> 
+   <img src="/images/posts/GAN/image-20210327231211755.png" alt="image-20210327231211755" style="zoom:67%;" /> 
 
 * GANS: 
 
@@ -55,7 +55,7 @@ menu:
 
 #### Generator
 
-* Use Neural Networks, input: class+nose vector, output: features(image)
+* Use Neural Networks, input: class+noise vector, output: features(image)
 
   <img src="/images/posts/GAN/image-20210328104045156.png" alt="image-20210328104045156" style="zoom:67%;" />   
 
@@ -68,8 +68,14 @@ menu:
 ####  BCE Cost Function
 
 * <img src="/images/posts/GAN/image-20210328101716372.png" alt="image-20210328101716372" style="zoom:67%;" /> 
-* 前一半：当label y 为0时，为0；当label y 为1时，若Prediction接近1则为0，若Prediction接近0则为负无穷。<img src="/images/posts/GAN/image-20210328101920175.png" alt="image-20210328101920175" style="zoom:67%;" /> 
-* 后一半：当label y 为1时，为0；当label y 为0时，若Prediction接近0则为1，若Prediction接近1则为负无穷。<img src="/images/posts/GAN/image-20210328102207241.png" alt="image-20210328102207241" style="zoom:67%;" /> 
+* 前一半：当label y 为0时，为0；当label y 为1时，若Prediction接近1则为0，若Prediction接近0则为负无穷。
+
+<img src="/images/posts/GAN/image-20210328101920175.png" alt="image-20210328101920175" style="zoom:67%;" /> 
+
+* 后一半：当label y 为1时，为0；当label y 为0时，若Prediction接近0则为1，若Prediction接近1则为负无穷。
+
+<img src="/images/posts/GAN/image-20210328102207241.png" alt="image-20210328102207241" style="zoom:67%;" /> 
+
 * 综合起来，如果Prediction与label相比非常不准确，则最终的值很大。
 
 #### Putting it Together
@@ -110,21 +116,25 @@ menu:
 
   * **ReLU (Rectified Linear Unit)**
 
-    * Problem: Dying ReLU problem
+      * Problem: Dying ReLU problem
 
-  * **Leaky ReLU: **<img src="/images/posts/GAN/image-20210328221554677.png" alt="image-20210328221554677" style="zoom:45%;" /> 
+  * **Leaky ReLU: **
 
-  * **Sigmoid: **<img src="/images/posts/GAN/image-20210328221950385.png" alt="image-20210328221950385" style="zoom:60%;" />
+      <img src="/images/posts/GAN/image-20210328221554677.png" alt="image-20210328221554677" style="zoom:45%;" /> 
 
-    * often used for the last layer
-    * Problem: vanishing gradient in saturation problems
+  * **Sigmoid: **
+  
+      <img src="/images/posts/GAN/image-20210328221950385.png" alt="image-20210328221950385" style="zoom:60%;" /> 
+      
+      * often used for the last layer
+      * Problem: vanishing gradient in saturation problems
 
      
 
-  * **Tanh (Hyperbolic Tangent): **<img src="/images/posts/GAN/image-20210328222228586.png" alt="image-20210328222228586" style="zoom:60%;" />
-
-    * between -1 and 1
-
+  * **Tanh (Hyperbolic Tangent): **
+  * <img src="/images/posts/GAN/image-20210328222228586.png" alt="image-20210328222228586" style="zoom:60%;" /> 
+  * between -1 and 1
+  
      
 
 #### Batch Normalization
@@ -176,8 +186,6 @@ applied on training data and test data.
 #### Problems with BCE loss
 
 * Flat regions on the cost function = vanishing gradients
-
-
 
 ### 1.5 Conditional Generation
 
