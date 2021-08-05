@@ -26,7 +26,7 @@ projects:
   repo: https://github.com/EricWang007/BUPT-News
   # url: ""
   summary: A searching engine of BUPT's news developed by Python.
-  tags: ["Schoolwork", "All"]
+  tags: ["schoolwork", "python"]
 
 - name: P2C Compiler
   # logo: images/projects/kubernetes.png
@@ -35,7 +35,7 @@ projects:
   repo: https://github.com/EricWang007/BUPT-News
   # url: ""
   summary: A Pascal to C Compiler developed by C++.
-  tags: ["Schoolwork", "All"]
+  tags: ["schoolwork", "C++"]
 
 - name: DNS-Server
   # logo: images/projects/kubernetes.png
@@ -44,4 +44,4 @@ projects:
   repo: https://github.com/ztqakita/DNS-Server
   # url: ""
   summary: Yet another DNS-Server developed by C.
-  tags: ["Schoolwork", "All"]
+  tags: ["schoolwork", "C"]
