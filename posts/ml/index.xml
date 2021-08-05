@@ -3,4 +3,4 @@ GANS:
 GAN in Real Life GAN的创始人：Ian Goodfellow GAN的应用领域： Image Generation, Deep fake Text Generation Data Augmentaion Image Filters 1.2 Basic Components Discriminator Use Neural Networks, input: features(image), output: probability
 0.85这个概率也会交给Generator
 Input features e.g.: RGB pixel values for images
-Generator Use Neural Networks, input: class+nose vector, output: features(image)</description></item></channel></rss>
+Generator Use Neural Networks, input: class+noise vector, output: features(image)</description></item></channel></rss>
