@@ -1,4 +1,5 @@
 ---
+
 title: "GAN基础"
 date: 2021-08-5T06:00:20+06:00
 hero: /images/posts/writing-posts/hugo-logo.svg
@@ -118,21 +119,23 @@ menu:
 
       * Problem: Dying ReLU problem
 
-  * **Leaky ReLU: **
+  * **Leaky ReLU**:
 
-      <img src="/images/posts/GAN/image-20210328221554677.png" alt="image-20210328221554677" style="zoom:45%;" /> 
+      <img src="/images/posts/GAN/image-20210328221554677.png" alt="image-20210328221554677" style="zoom:45%;" />  
 
-  * **Sigmoid: **
+  * **Sigmoid**:
   
-      <img src="/images/posts/GAN/image-20210328221950385.png" alt="image-20210328221950385" style="zoom:60%;" /> 
+      <img src="/images/posts/GAN/image-20210328221950385.png" alt="image-20210328221950385" style="zoom:60%;" />  
       
       * often used for the last layer
       * Problem: vanishing gradient in saturation problems
 
      
 
-  * **Tanh (Hyperbolic Tangent): **
-  * <img src="/images/posts/GAN/image-20210328222228586.png" alt="image-20210328222228586" style="zoom:60%;" /> 
+  * **Tanh (Hyperbolic Tangent)**:
+  
+    <img src="/images/posts/GAN/image-20210328222228586.png" alt="image-20210328222228586" style="zoom:60%;" />  
+  
   * between -1 and 1
   
      
@@ -156,15 +159,15 @@ applied on training data and test data.
 
 * **Stride**: determines how the filter scans the image
 
-* **Padding: **gives similar importance to the edges and the center
+* **Padding**: gives similar importance to the edges and the center
 
   <img src="/images/posts/GAN/image-20210331164954722.png" alt="image-20210331164954722" style="zoom:67%;" /> 
 
 #### Pooling&Upsampling
 
-* **Pooling: **reduces the size of the input
+* **Pooling**: reduces the size of the input
 
-* **Upsampling: **increases the size of the input
+* **Upsampling**: increases the size of the input
 
 * Difference with convolution: Pooling and Upsampling **have no learnable parameters**, so they involve no learning.
 

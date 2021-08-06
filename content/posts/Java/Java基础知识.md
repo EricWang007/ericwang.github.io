@@ -22,7 +22,7 @@ menu:
 
 ### Java 源程序与编译型运行区别
 
-![image-20210727210056453](../../../static/images/posts/java/image-20210727210056453.png)
+![image-20210727210056453](/images/posts/java/image-20210727210056453.png)
 
 ### Java 基本数据类型
 
