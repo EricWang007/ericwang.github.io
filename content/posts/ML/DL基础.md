@@ -1,7 +1,7 @@
 ---
 
 title: "DL基础"
-date: 2021-08-5T06:00:20+06:00
+date: 2021-08-05T06:00:20+06:00
 hero: ../../../static/images/posts/writing-posts/hugo-logo.svg
 math: true
 menu:
@@ -65,7 +65,7 @@ we want $\hat{y(i)}\approx y(i)$
 
 > It measures how well you're doing <u>on a single training example</u>.
 
-**Cost function**:$J(w,b)=\frac{1}{m}\sum_{i = 1}^{m}L(\hat{y},y)$​
+**Cost function**:$J(w,b)=\frac{1}{m}\sum_{i = 1}^{m}L(\hat{y}^{(i)},y^{(i)})$
 
 > It measures how well you're doing <u>on the entire training set</u>.
 
@@ -79,5 +79,111 @@ $$
 
 $\alpha$​​​​ is the <u>learning rate</u>.
 
-#### Derivatives (导数)
+Derivatives (导数)
+
+#### Computation Graph
+
+<u>backward propagation</u>
+
+![image-20210806212057599](../../../static/images/posts/ML/image-20210806212057599.png)
+
+在代码中，可以用`dv`，`da`作为变量名。
+
+$$
+\frac{dJ}{dc}=\frac{dJ}{dv}\frac{dv}{du}\frac{du}{dc}=3\times1\times3=9
+$$
+
+#### Gradient Descent on *1* example
+
+![image-20210806213958503](../../../static/images/posts/ML/image-20210806213958503.png)
+$$
+w_1 := w_1-\alpha\frac{\partial dL}{\partial w},w_2 := w_2-\alpha\frac{\partial dL}{\partial w2},b := b-\alpha\frac{\partial dL}{\partial b}
+$$
+
+#### Gradient Descent on *m* examples
+
+> Neural network programming guideline: Whenever possible, avoid explicit for-loops. 
+
+> Use <u>vectorization</u>.
+
+**Forward Propagation:**
+$$
+A=\sigma\left(w^{T} X+b\right)=\left(a^{(1)}, a^{(2)}, \ldots, a^{(m-1)}, a^{(m)}\right)
+$$
+
+* **Cost function:**
+
+$$
+J=-\frac{1}{m} \sum_{i=1}^{m}\left(y^{(i)} \log \left(a^{(i)}\right)+\left(1-y^{(i)}\right) \log \left(1-a^{(i)}\right)\right)
+$$
+
+**Backward Propagation**:
+
+$$
+\frac{\partial J}{\partial w}=\frac{1}{m} X(A-Y)^{T}
+$$
+
+
+$$
+\frac{\partial J}{\partial b}=\frac{1}{m} \sum_{i=1}^{m}\left(a^{(i)}-y^{(i)}\right)
+$$
+
+**Code of Optimizing procedure:**
+
+```python
+def propagate(w, b, X, Y):
+    m = X.shape[1]
+    
+    # Forward propogation
+    A = sigmoid(np.dot(w.T, X)+b);
+    cost = -np.average(Y*np.log(A)+(1-Y)*np.log(1-A))
+    
+    #Backward propagation
+    dw = np.dot(X, (A-Y).T)/m
+    db = np.average(A-Y)
+
+    cost = np.squeeze(np.array(cost))
+    grads = {"dw": dw,
+             "db": db}
+    return grads, cost
+
+
+def optimize(w, b, X, Y, num_iterations=100, learning_rate=0.009, print_cost=False):
+    for i in range(num_iterations):
+            grads, cost = propagate(w, b, X, Y)
+            dw = grads["dw"]
+            db = grads["db"]
+            w = w - learning_rate*dw;
+            b = b - learning_rate*db;
+```
+
+
+
+### 1.5 Python Skill
+
+**Broadcasting**
+
+```python
+A = np.array([1,2,3,4],
+			[5,6,7,8],
+			[9,10,11,12])
+cal = A.sum(axis=0) # axis=0垂直方向求和,axis=1水平方向求和
+percentage=A/cal.reshape(1,4) # broadcasting(1,4)->(3,4))
+```
+
+> 不要用rank=1(秩为1)的array,而要用5*1的矩阵
+
+```python
+a = np.random.randn(5) # bad
+a = np.random.randn(5,1) # good
+assert(a.shape==(5,1))
+```
+
+## 2 Neural Network
+
+A two layer neural network (不算输入层):
+
+![image-20210807193618855](../../../static/images/posts/ML/image-20210807193618855.png)
+
+
 

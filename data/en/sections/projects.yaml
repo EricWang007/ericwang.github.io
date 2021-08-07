@@ -39,7 +39,7 @@ projects:
 
 - name: DNS-Server
   # logo: images/projects/kubernetes.png
-  role: Contributor
+  role: Owner
   timeline: "August 2020 - September 2020"
   repo: https://github.com/ztqakita/DNS-Server
   # url: ""

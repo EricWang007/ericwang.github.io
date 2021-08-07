@@ -1,7 +1,7 @@
 ---
 
 title: "GAN基础"
-date: 2021-08-5T06:00:20+06:00
+date: 2021-08-05T06:00:20+06:00
 hero: /images/posts/writing-posts/hugo-logo.svg
 menu:
   sidebar:
