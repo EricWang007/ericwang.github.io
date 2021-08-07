@@ -19,17 +19,17 @@ menu:
 
 ### 1.1 Introduction
 
-<img src="/images/posts/GAN/image-20210327230913987.png" alt="image-20210327230913987" style="zoom:67%;" /> 
+<img src="/images/posts/ML/image-20210327230913987.png" alt="image-20210327230913987" style="zoom:67%;" /> 
 
 #### **Generative Models:**
 
 * Variational Autoencoders(VAE):
 
-   <img src="/images/posts/GAN/image-20210327231211755.png" alt="image-20210327231211755" style="zoom:67%;" /> 
+   <img src="/images/posts/ML/image-20210327231211755.png" alt="image-20210327231211755" style="zoom:67%;" /> 
 
 * GANS: 
 
-  <img src="/images/posts/GAN/image-20210327231532258.png" alt="image-20210327231532258" style="zoom:67%;" /> 
+  <img src="/images/posts/ML/image-20210327231532258.png" alt="image-20210327231532258" style="zoom:67%;" /> 
 
 #### **GAN in Real Life**
 
@@ -46,9 +46,9 @@ menu:
 
 * Use Neural Networks, input: features(image), output: probability
 
-  <img src="/images/posts/GAN/image-20210328103833111.png" alt="image-20210328103833111" style="zoom:67%;" /> 
+  <img src="/images/posts/ML/image-20210328103833111.png" alt="image-20210328103833111" style="zoom:67%;" /> 
 
-  <img src="/images/posts/GAN/image-20210327233724319.png" alt="image-20210327233724319" style="zoom:50%;" /> 
+  <img src="/images/posts/ML/image-20210327233724319.png" alt="image-20210327233724319" style="zoom:50%;" /> 
 
 * 0.85这个概率也会交给Generator
 
@@ -58,7 +58,7 @@ menu:
 
 * Use Neural Networks, input: class+noise vector, output: features(image)
 
-  <img src="/images/posts/GAN/image-20210328104045156.png" alt="image-20210328104045156" style="zoom:67%;" />   
+  <img src="/images/posts/ML/image-20210328104045156.png" alt="image-20210328104045156" style="zoom:67%;" />   
 
 * Generator目标是让Fake Example的Y^尽量接近1，而Discriminator目标是让其尽量接近0
 
@@ -68,14 +68,14 @@ menu:
 
 ####  BCE Cost Function
 
-* <img src="/images/posts/GAN/image-20210328101716372.png" alt="image-20210328101716372" style="zoom:67%;" /> 
+* <img src="/images/posts/ML/image-20210328101716372.png" alt="image-20210328101716372" style="zoom:67%;" /> 
 * 前一半：当label y 为0时，为0；当label y 为1时，若Prediction接近1则为0，若Prediction接近0则为负无穷。
 
-<img src="/images/posts/GAN/image-20210328101920175.png" alt="image-20210328101920175" style="zoom:67%;" /> 
+<img src="/images/posts/ML/image-20210328101920175.png" alt="image-20210328101920175" style="zoom:67%;" /> 
 
 * 后一半：当label y 为1时，为0；当label y 为0时，若Prediction接近0则为1，若Prediction接近1则为负无穷。
 
-<img src="/images/posts/GAN/image-20210328102207241.png" alt="image-20210328102207241" style="zoom:67%;" /> 
+<img src="/images/posts/ML/image-20210328102207241.png" alt="image-20210328102207241" style="zoom:67%;" /> 
 
 * 综合起来，如果Prediction与label相比非常不准确，则最终的值很大。
 
@@ -89,25 +89,25 @@ menu:
 
 * PyTorch vs TensorFlow
 
-<img src="/images/posts/GAN/image-20210328105037161.png" alt="image-20210328105037161" style="zoom:80%;" /> 
+<img src="/images/posts/ML/image-20210328105037161.png" alt="image-20210328105037161" style="zoom:80%;" /> 
 
-* <img src="/images/posts/GAN/image-20210328110647182.png" alt="image-20210328110647182" style="zoom:77%;" />  
+* <img src="/images/posts/ML/image-20210328110647182.png" alt="image-20210328110647182" style="zoom:77%;" />  
 
 * Initialization of the model
 
-  ![image-20210328111958874](/images/posts/GAN/image-20210328111958874.png) 
+  ![image-20210328111958874](/images/posts/ML/image-20210328111958874.png) 
 
 * Cost function
 
-  ![image-20210328112034910](/images/posts/GAN/image-20210328112034910.png) 
+  ![image-20210328112034910](/images/posts/ML/image-20210328112034910.png) 
 
 * Optimizer: stochastic gradient descent (随机梯度下降)，lr为learning rate
 
-  ![image-20210328112129298](/images/posts/GAN/image-20210328112129298.png) 
+  ![image-20210328112129298](/images/posts/ML/image-20210328112129298.png) 
 
 * Training loop for number of epochs
 
-  <img src="/images/posts/GAN/image-20210328112648135.png" alt="image-20210328112648135" style="zoom:80%;" /> 
+  <img src="/images/posts/ML/image-20210328112648135.png" alt="image-20210328112648135" style="zoom:80%;" /> 
 
 ### 1.3 More Components
 
@@ -121,11 +121,11 @@ menu:
 
   * **Leaky ReLU**:
 
-      <img src="/images/posts/GAN/image-20210328221554677.png" alt="image-20210328221554677" style="zoom:45%;" />  
+      <img src="/images/posts/ML/image-20210328221554677.png" alt="image-20210328221554677" style="zoom:45%;" />  
 
   * **Sigmoid**:
   
-      <img src="/images/posts/GAN/image-20210328221950385.png" alt="image-20210328221950385" style="zoom:60%;" />  
+      <img src="/images/posts/ML/image-20210328221950385.png" alt="image-20210328221950385" style="zoom:60%;" />  
       
       * often used for the last layer
       * Problem: vanishing gradient in saturation problems
@@ -134,7 +134,7 @@ menu:
 
   * **Tanh (Hyperbolic Tangent)**:
   
-    <img src="/images/posts/GAN/image-20210328222228586.png" alt="image-20210328222228586" style="zoom:60%;" />  
+    <img src="/images/posts/ML/image-20210328222228586.png" alt="image-20210328222228586" style="zoom:60%;" />  
   
   * between -1 and 1
   
@@ -144,7 +144,7 @@ menu:
 
 applied on training data and test data.
 
-<img src="/images/posts/GAN/image-20210328223933028.png" alt="image-20210328223933028" style="zoom:70%;" /> 
+<img src="/images/posts/ML/image-20210328223933028.png" alt="image-20210328223933028" style="zoom:70%;" /> 
 
 * Batch normalization smooths the cost function
 * Batch normalization reduces the internal covariance shift
@@ -161,7 +161,7 @@ applied on training data and test data.
 
 * **Padding**: gives similar importance to the edges and the center
 
-  <img src="/images/posts/GAN/image-20210331164954722.png" alt="image-20210331164954722" style="zoom:67%;" /> 
+  <img src="/images/posts/ML/image-20210331164954722.png" alt="image-20210331164954722" style="zoom:67%;" /> 
 
 #### Pooling&Upsampling
 
@@ -171,11 +171,11 @@ applied on training data and test data.
 
 * Difference with convolution: Pooling and Upsampling **have no learnable parameters**, so they involve no learning.
 
-  <img src="/images/posts/GAN/image-20210331170057623.png" alt="image-20210331170057623" style="zoom:57%;" /> 
+  <img src="/images/posts/ML/image-20210331170057623.png" alt="image-20210331170057623" style="zoom:57%;" /> 
 
 #### Transposed Convolution
 
-<img src="/images/posts/GAN/image-20210331170744678.png" alt="image-20210331170744678" style="zoom:57%;" /> 
+<img src="/images/posts/ML/image-20210331170744678.png" alt="image-20210331170744678" style="zoom:57%;" /> 
 
 * have learnable parameters
 * Problem: results have a checkerboard pattern
