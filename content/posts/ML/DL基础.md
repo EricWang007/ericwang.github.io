@@ -190,20 +190,22 @@ assert(a.shape==(5,1))
 #### On <u>single training example</u>:
 
 $$
-\begin{aligned}
-&z^{[1]}=W^{[1]} x+b^{[1]}, &a^{[1]}=\sigma\left(z^{[1]}\right) \\
-&z^{[2]}=W^{[2]} a^{[1]}+b^{[2]}, &a^{[2]}=\sigma\left(z^{[2]}\right)
-\end{aligned}
+z^{[1]}=W^{[1]} x+b^{[1]}, a^{[1]}=\sigma(z^{[1]}) 
+$$
+
+$$
+z^{[2]}=W^{[2]} a^{[1]}+b^{[2]}, a^{[2]}=\sigma(z^{[2]})
 $$
 
 #### vectorizing across <u>multiple examples</u>:
 
 ![image-20210808114345333](../../../static/images/posts/ML/image-20210808114345333.png)
 $$
-\begin{aligned}
-Z^{[1]} &=W^{[1]} X+b^{[1]}, & &A^{[1]}=g^{[1]}(Z^{[1]}),\\
-Z^{[2]} &=W^{[2]} A^{[1]}+b^{[2]}, & &A^{[2]}=g^{[2]}(Z^{[2]})=\sigma(Z^{[2]})
-\end{aligned}
+Z^{[1]} =W^{[1]} X+b^{[1]},A^{[1]}=g^{[1]}(Z^{[1]}),
+$$
+
+$$
+Z^{[2]} =W^{[2]} A^{[1]}+b^{[2]},A^{[2]}=g^{[2]}(Z^{[2]})=\sigma(Z^{[2]})
 $$
 
 ### 2.3 Activation functions
@@ -227,10 +229,9 @@ $$
 * ReLU:           
 
 $$
-g'(z)=\left\{
+g'(z)=\left\\{
 \begin{aligned}
-0 &  & z<0 \\
-1 &  & z\geq0
+0 &  & z<0 \\\\ 1 &  & z\geq0
 \end{aligned}
 \right.
 $$
@@ -238,10 +239,9 @@ $$
 * Leaky ReLU:
 
 $$
-g'(z)=\left\{
+g'(z)=\left\\{
 \begin{aligned}
-0.01 &  & z<0 \\
-1 &  & z\geq0
+0.01 &  & z<0 \\\\ 1 &  & z\geq0
 \end{aligned}
 \right.
 $$
@@ -249,12 +249,28 @@ $$
 ### 2.4 Gradient descent for neural networks
 
 backward propagation:
+
 $$
-dZ^{[2]}=A^{[2]}-Y\\
-dW^{[2]}=\frac{1}{m}dZ^{[2]}A^{[1]T}\\
-db^{[2]}=\frac{1}{m}np.sum(dZ^{[2]},axis=1,keepdim=True)\\
-d Z^{[1]}=W^{[2] T} d Z^{[2]} * g^{[1]^{\prime}}\left(\mathrm{Z}^{[1]}\right)\\
-d W^{[1]}=\frac{1}{m} d Z^{[1]} X^{T} \\
+dZ^{[2]}=A^{[2]}-Y
+$$
+
+$$ 
+dW^{[2]}=\frac{1}{m}dZ^{[2]}A^{[1]T}
+$$ 
+
+$$
+db^{[2]}=\frac{1}{m}np.sum(dZ^{[2]},axis=1,keepdim=True)
+$$
+
+$$
+d Z^{[1]}=W^{[2] T} d Z^{[2]} * g^{[1]^{\prime}}\left(\mathrm{Z}^{[1]}\right)
+$$
+
+$$
+d W^{[1]}=\frac{1}{m} d Z^{[1]} X^{T}
+$$
+
+$$
 d b^{[1]}=\frac{1}{m} np.sum(d Z^{[1]}, axis=1, keepdims=True)
 $$
 
@@ -265,9 +281,18 @@ $$
 > 在Neural network中，w不能初始化为全0。
 
 $$
-w^{[1]}=np.random.randn((2,2))*0.01\\
-b^{[2]}=np.zero((2,1))\\
-w^{[1]}=np.random.randn((1,2))*0.01\\
+w^{[1]}=np.random.randn((2,2))*0.01
+$$
+
+$$
+b^{[2]}=np.zero((2,1))
+$$
+
+$$
+w^{[1]}=np.random.randn((1,2))*0.01
+$$
+
+$$
 b^{[2]}=0
 $$
 
