@@ -2,7 +2,7 @@
 
 title: "DL基础"
 date: 2021-08-05T06:00:20+06:00
-hero: ../../../static/images/posts/writing-posts/hugo-logo.svg
+hero: /images/posts/writing-posts/hugo-logo.svg
 math: true
 menu:
   sidebar:
@@ -85,7 +85,7 @@ Derivatives (导数)
 
 <u>backward propagation</u>
 
-![image-20210806212057599](../../../static/images/posts/ML/image-20210806212057599.png)
+![image-20210806212057599](/images/posts/ML/image-20210806212057599.png)
 
 在代码中，可以用`dv`，`da`作为变量名。
 
@@ -95,7 +95,7 @@ $$
 
 #### Gradient Descent on *1* example
 
-![image-20210806213958503](../../../static/images/posts/ML/image-20210806213958503.png)
+![image-20210806213958503](/images/posts/ML/image-20210806213958503.png)
 $$
 w_1 := w_1-\alpha\frac{\partial dL}{\partial w},w_2 := w_2-\alpha\frac{\partial dL}{\partial w2},b := b-\alpha\frac{\partial dL}{\partial b}
 $$
@@ -183,7 +183,7 @@ assert(a.shape==(5,1))
 
 > One hidden layer NN also called a two layer NN (不算输入层)
 
-![image-20210807193618855](../../../static/images/posts/ML/image-20210807193618855.png)
+![image-20210807193618855](/images/posts/ML/image-20210807193618855.png)
 
 ### 2.2 Forward Propagation
 
@@ -199,7 +199,7 @@ $$
 
 #### vectorizing across <u>multiple examples</u>:
 
-![image-20210808114345333](../../../static/images/posts/ML/image-20210808114345333.png)
+![image-20210808114345333](/images/posts/ML/image-20210808114345333.png)
 $$
 Z^{[1]} =W^{[1]} X+b^{[1]},A^{[1]}=g^{[1]}(Z^{[1]}),
 $$
@@ -220,7 +220,7 @@ $$
 
 * Leaky Relu: a = max(0.01z, z)
 
-![image-20210808114900557](../../../static/images/posts/ML/image-20210808114900557.png)
+![image-20210808114900557](/images/posts/ML/image-20210808114900557.png)
 
 ### 2.4 Derivatives of Activation functions
 
