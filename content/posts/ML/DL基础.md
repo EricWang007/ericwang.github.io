@@ -2,7 +2,7 @@
 
 title: "DL基础"
 date: 2021-08-05T06:00:20+06:00
-hero: /images/posts/writing-posts/hugo-logo.svg
+hero: ../../../static/images/posts/writing-posts/hugo-logo.svg
 math: true
 menu:
   sidebar:
@@ -85,7 +85,7 @@ Derivatives (导数)
 
 <u>backward propagation</u>
 
-![image-20210806212057599](/images/posts/ML/image-20210806212057599.png)
+![image-20210806212057599](../../../static/images/posts/ML/image-20210806212057599.png)
 
 在代码中，可以用`dv`，`da`作为变量名。
 
@@ -95,7 +95,7 @@ $$
 
 #### Gradient Descent on *1* example
 
-![image-20210806213958503](/images/posts/ML/image-20210806213958503.png)
+![image-20210806213958503](../../../static/images/posts/ML/image-20210806213958503.png)
 $$
 w_1 := w_1-\alpha\frac{\partial dL}{\partial w},w_2 := w_2-\alpha\frac{\partial dL}{\partial w2},b := b-\alpha\frac{\partial dL}{\partial b}
 $$
@@ -157,8 +157,6 @@ def optimize(w, b, X, Y, num_iterations=100, learning_rate=0.009, print_cost=Fal
             b = b - learning_rate*db;
 ```
 
-
-
 ### 1.5 Python Skill
 
 **Broadcasting**
@@ -179,11 +177,97 @@ a = np.random.randn(5,1) # good
 assert(a.shape==(5,1))
 ```
 
-## 2 Neural Network
+## 2 One hidden layer Neural Network
 
-A two layer neural network (不算输入层):
+### 2.1 Neural Network Representation
 
-![image-20210807193618855](/images/posts/ML/image-20210807193618855.png)
+> One hidden layer NN also called a two layer NN (不算输入层)
 
+![image-20210807193618855](../../../static/images/posts/ML/image-20210807193618855.png)
 
+### 2.2 Forward Propagation
+
+#### On <u>single training example</u>:
+
+$$
+\begin{aligned}
+&z^{[1]}=W^{[1]} x+b^{[1]}, &a^{[1]}=\sigma\left(z^{[1]}\right) \\
+&z^{[2]}=W^{[2]} a^{[1]}+b^{[2]}, &a^{[2]}=\sigma\left(z^{[2]}\right)
+\end{aligned}
+$$
+
+#### vectorizing across <u>multiple examples</u>:
+
+![image-20210808114345333](../../../static/images/posts/ML/image-20210808114345333.png)
+$$
+\begin{aligned}
+Z^{[1]} &=W^{[1]} X+b^{[1]}, & &A^{[1]}=g^{[1]}(Z^{[1]}),\\
+Z^{[2]} &=W^{[2]} A^{[1]}+b^{[2]}, & &A^{[2]}=g^{[2]}(Z^{[2]})=\sigma(Z^{[2]})
+\end{aligned}
+$$
+
+### 2.3 Activation functions
+
+* tanh: $a=\frac{e^z-e^{-z}}{e^z+e^{-z}}$
+
+> tanh函数在绝大多数场景下比$\sigma$​函数更适合用作激活函数；唯独在binary classification的输出层，$\sigma$​​函数更适合用作激活函数。
+
+* Relu: a=max(0, z)
+
+> Relu函数可解决梯度消失的问题，优于tanh函数和$\sigma$​函数。除了输出层，默认作为激活函数。
+
+* Leaky Relu: a = max(0.01z, z)
+
+![image-20210808114900557](../../../static/images/posts/ML/image-20210808114900557.png)
+
+### 2.4 Derivatives of Activation functions
+
+* g(z)=$\sigma$​(z):      $g'(z)=a(1-a)$
+* g(z)=tanh(z):  $g'(z)=1-a^2$​
+* ReLU:           
+
+$$
+g'(z)=\left\{
+\begin{aligned}
+0 &  & z<0 \\
+1 &  & z\geq0
+\end{aligned}
+\right.
+$$
+
+* Leaky ReLU:
+
+$$
+g'(z)=\left\{
+\begin{aligned}
+0.01 &  & z<0 \\
+1 &  & z\geq0
+\end{aligned}
+\right.
+$$
+
+### 2.4 Gradient descent for neural networks
+
+backward propagation:
+$$
+dZ^{[2]}=A^{[2]}-Y\\
+dW^{[2]}=\frac{1}{m}dZ^{[2]}A^{[1]T}\\
+db^{[2]}=\frac{1}{m}np.sum(dZ^{[2]},axis=1,keepdim=True)\\
+d Z^{[1]}=W^{[2] T} d Z^{[2]} * g^{[1]^{\prime}}\left(\mathrm{Z}^{[1]}\right)\\
+d W^{[1]}=\frac{1}{m} d Z^{[1]} X^{T} \\
+d b^{[1]}=\frac{1}{m} np.sum(d Z^{[1]}, axis=1, keepdims=True)
+$$
+
+* keepdim=True: 用于防止输出$(n^{[2]},)$，而是输出$(n^{[2]},1)$
+
+### 2.5 Random Initialization
+
+> 在Neural network中，w不能初始化为全0。
+
+$$
+w^{[1]}=np.random.randn((2,2))*0.01\\
+b^{[2]}=np.zero((2,1))\\
+w^{[1]}=np.random.randn((1,2))*0.01\\
+b^{[2]}=0
+$$
 
