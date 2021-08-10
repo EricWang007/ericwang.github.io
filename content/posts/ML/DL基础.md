@@ -350,7 +350,7 @@ $$
 
 Paramerters:
 
-*  $W^{[x]},b^{[x]}$
+*  $W^{[a]},b^{[a]}$​
 
 Hyperparematers: 
 
