@@ -50,4 +50,9 @@ Initial setup Search depends on additional output content type of JSON in config
 No content shown here is rendered, all content is based in the template layouts/page/search.html
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description></item></channel></rss>
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description></item><item><title>test</title><link>https://ericwang007.github.io/posts/test/</link><pubDate>Thu, 05 Aug 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/test/</guid><description>This page is used for test.
+$$ aaaa $$
+$$ \begin{matrix} a &amp;amp; b \\ c &amp;amp; d \end{matrix} $$
+$$ \left[\begin{array} {rrr} 3.381563 &amp;amp; 3.389113 \\ 4.527875 &amp;amp; 5.854178 \\ 2.655682 &amp;amp; 4.411995 \\ \vdots &amp;amp; \vdots \end{array}\right] $$
+$$ g'(z)=\left\{ \begin{aligned} 0, &amp;amp; &amp;amp; z&amp;lt;0 \\ 1, &amp;amp; &amp;amp; z\geq0 \end{aligned} \right. $$
+$$ \begin{aligned} a=b+c \\ d=f+e \end{aligned} $$</description></item></channel></rss>
