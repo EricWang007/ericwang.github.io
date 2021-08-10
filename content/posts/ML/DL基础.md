@@ -246,7 +246,7 @@ g'(z)=\left\\{
 \right.
 $$
 
-### 2.4 Gradient descent for neural networks
+### 2.5 Gradient descent for neural networks
 
 backward propagation:
 
@@ -254,9 +254,9 @@ $$
 dZ^{[2]}=A^{[2]}-Y
 $$
 
-$$ 
+$$
 dW^{[2]}=\frac{1}{m}dZ^{[2]}A^{[1]T}
-$$ 
+$$
 
 $$
 db^{[2]}=\frac{1}{m}np.sum(dZ^{[2]},axis=1,keepdim=True)
@@ -276,7 +276,7 @@ $$
 
 * keepdim=True: 用于防止输出$(n^{[2]},)$，而是输出$(n^{[2]},1)$
 
-### 2.5 Random Initialization
+### 2.6 Random Initialization
 
 > 在Neural network中，w不能初始化为全0。
 
@@ -295,4 +295,67 @@ $$
 $$
 b^{[2]}=0
 $$
+
+## 3 Deep Neural Network
+
+* layers: L = 4
+* ouput: $\hat{y}=a^{[L]}$
+
+### 3.1 Forward Propagation
+
+for l=1...4:
+$$
+Z^{[l]}=W^{[l]}A^{[l-1]}+b^{[l]}
+$$
+
+$$
+A^{[Ll}=g^{[l]}(Z^{[l]})
+$$
+
+### 3.2 Backward Propagation
+
+* Input $da^{[l]}$​
+* Output $da^{[l-1},dW^{[l]},db^{[l]}$
+
+$$
+dZ^{[l]}=dA^{[l]}*{g^{[l]}}'(Z^{[l]})
+$$
+
+$$
+dW^{[l]}=\frac{1}{m}dZ^{[l]}·A^{[l-1]T}
+$$
+
+$$
+db^{[l]}=\frac{1}{m}np.sum(dZ^{[l]},AXIS=1, keepdims=True)
+$$
+
+$$
+dA^{[l-1]}=W^{[l]T}dZ^{[l]}
+$$
+
+### 3.3 Matrix dimensions
+
+* $W^{[l]},dW^{[l]}:(n^{[l]},n^{[l-1]})$
+* $b^{[l]},db^{[l]}:(n^{[l]},1)$
+* $z^{[l]},a^{[l]}:(n^{[l]},1)$
+* $Z^{[l]},A^{[l]},dZ^{[l]},dA^{[l]}:(n^{[l]},m)$
+
+### 3.4 Working procedure
+
+![image-20210810111918024](/images/posts/ML/image-20210810111918024.png)
+
+### 3.5 Parameters & Hyperparameters
+
+> Hyperparameters control the parameters.
+
+Paramerters:
+
+*  $W^{[x]},b^{[x]}$
+
+Hyperparematers: 
+
+* learning rate $\alpha$​
+* iterations
+* hidden layers L
+* ......
 
