@@ -58,14 +58,56 @@ Convolution function in tensorflow: `tf.nn.conv2d`
 * with $n\times n$​ image, $f\times f$​​ filter, padding p, stride s, the ouput size is:
 
 $$
-\bigg\lfloor\frac{n+ap-f}{s}+1\bigg\rfloor\times\bigg\lfloor\frac{n+ap-f}{s}+1\bigg\rfloor
+\bigg\lfloor\frac{n+2p-f}{s}+1\bigg\rfloor\times\bigg\lfloor\frac{n+2p-f}{s}+1\bigg\rfloor
 $$
 
 ### 1.4 Convolutions over volumes
 
+channels（depths, 第三个维度）相等
+
 ![image-20210812233547145](/images/posts/ML/image-20210812233547145.png)
+
+multiple filters：
 
 ![image-20210812233900130](/images/posts/ML/image-20210812233900130.png)
 
 ### 1.5 One Layer of a CNN
+
+If layer **`l`** is a convolution layer:
+
+* $f^{[l]}=$filter size
+* $p^{[l]}=$​padding
+* $s^{[l]}=$​stride
+* $n_C^{[l]}=$​number of filters
+* Each filter is: $f^{[l]}\times f^{[l]}\times n_C^{[l-1]}$​
+* Weights: $f^{[l]}\times f^{[l]}\times n_C^{[l-1]}\times n_C^{[l]}$​
+* bias: $n_C{[l]}$ — (1,1,1,$n_C{[l]}$)
+* Input: $n^{[l-1]}_H\times n^{[l-1]}_W\times n^{[l-1]}_C$​​
+* Output: $a^{[l]}=n^{[l]}_H\times n^{[l]}_W\times n^{[l]}_C$​​​
+
+$$
+n^{[l]}=\bigg\lfloor\frac{n^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}}+1\bigg\rfloor
+$$
+
+### 1.6 Example ConvNet
+
+![image-20210818172112985](/images/posts/ML/image-20210818172112985.png)
+
+> Height and Width stay the same for a while, and gradually trend down as you go deeper in the neural network.
+
+> The number of channels gradually increase.
+
+**Types of layer in a convolutional network:**
+
+* Convolution (CONV)
+* Pooling (POOL)
+* Fully connected (FC)
+
+### 1.7 Pooling layers
+
+* Max pooling
+
+> only has hyperparameters(fixed), doesn't has parameters.
+
+  ![image-20210819122112750](/images/posts/ML/image-20210819122112750.png)
 
