@@ -10,4 +10,5 @@ get(int index) 由于Deque接口中没有get方法（Deque继承自Queue），�
 poll() java.util.LinkedList中(接口Deque中规定)，弹出头部，同pop
 java.util.Stack中无法使用
 peek() java.util.Stack中，返回尾部
-java.util.LinkedList中(接口Deque中规定)，返回头部</description></item></channel></rss>
+java.util.LinkedList中(接口Deque中规定)，返回头部
+Size &amp;amp; Length size() java.</description></item></channel></rss>
