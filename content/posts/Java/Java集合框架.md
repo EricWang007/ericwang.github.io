@@ -65,3 +65,18 @@ Stack<Integer> queue2 = new Stack<Integer>();
 > `java.util.Stack`中，返回尾部
 >
 > `java.util.LinkedList`中(接口`Deque`中规定)，返回头部
+
+### Size & Length
+
+* size()
+
+> `java.util.Collection`中的一个方法
+
+* length
+
+> 任何`数组`的属性
+
+* length()
+
+> `java.lang.String`的一个方法
+
