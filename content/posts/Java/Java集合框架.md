@@ -80,3 +80,43 @@ Stack<Integer> queue2 = new Stack<Integer>();
 
 > `java.lang.String`的一个方法
 
+### String & StringBuffer
+
+* setCharAt(int index, char ch)
+
+### Integer 和 String
+
+```java
+Integer a = Integer.valueOf("124");
+String str = String.valueOf(123);
+```
+
+### equals和==的区别
+
+* == 比较的是\**变量(栈)内存中存放的对象的(堆)内存地址，\**用来判断两个对象的地址是否相同，即是否是指相同一个对象
+* equals用来比较的是两个对象的内容是否相等
+
+### Arrays.sort自定义
+
+sort默认为升序
+
+几种降序定义
+
+```java
+Integer[] arr = {5,4,7,9,2,12,54,21,1};
+// Method 1
+Arrays.sort(arr, new Comparator<Integer>() {
+            public int compare(Integer a, Integer b) {
+                return b-a;
+            }
+        });
+
+// Method 2
+Arrays.sort(arr, (a, b) -> {
+            return b-a;
+        });
+
+// Method 3
+Arrays.sort(arr, (a, b) -> b.compareTo(a));
+```
+

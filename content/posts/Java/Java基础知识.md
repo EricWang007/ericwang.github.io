@@ -66,5 +66,11 @@ public class Variable{
 
 > 数组是储存在堆上的对象
 
+### 传值与传引用
+
+> **基本类型**，**Integer、Long、Byte、Double、Float、Short**，及**String**作为参数传递时，是传递值的拷贝，无论你怎么改变这个拷贝，原值是不会改变的；
+>
+> 其它对象作为参数传递时，是把对象在内存中的地址拷贝了一份传给了参数。
+
 ## II. Java Number & Math 类
 
