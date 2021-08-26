@@ -32,43 +32,47 @@ Stack<Integer> queue2 = new Stack<Integer>();
 ```
 
 
-* push()
+* E push(E item)
 
 > `java.util.Stack`中，加入尾部
 >
 > `java.util.LinkedList`中(接口`Deque`中规定)，加入头部
 
-* add()
+* boolean add(E e)
 
 > 加入尾部，两种方法均可使用，`java.util.Collection`中规定
 
-* pop()
+* E pop()
 
 >  `java.util.Stack`中，弹出尾部
 >
 >  `java.util.LinkedList`中(接口`Deque`中规定)，弹出头部
 
-* get(int  index)
+* E get(int  index)
 
 > 由于`Deque`接口中没有get方法（`Deque`继承自`Queue`），故使用`LinkedList`时无法用get
 >
 > 而`Stack`继承自`Vector`->`List`，故使用`Stack`时可以用get
 
-* poll()
+* E poll()
 
 > `java.util.LinkedList`中(接口`Deque`中规定)，弹出头部，同pop
 >
 > `java.util.Stack`中无法使用
 
-* peek()
+* E peek()
 
 > `java.util.Stack`中，返回尾部
 >
 > `java.util.LinkedList`中(接口`Deque`中规定)，返回头部
 
+### Map
+
+* V put(K key, V value)
+
 ### Size & Length
 
-* size()
+* int size()
 
 > `java.util.Collection`中的一个方法
 
@@ -76,13 +80,15 @@ Stack<Integer> queue2 = new Stack<Integer>();
 
 > 任何`数组`的属性
 
-* length()
+* int length()
 
 > `java.lang.String`的一个方法
 
 ### String & StringBuffer
 
-* setCharAt(int index, char ch)
+* void setCharAt(int index, char ch)
+
+> `StringBuffer`中的一个方法，String无法使用
 
 ### Integer 和 String
 
@@ -117,6 +123,15 @@ Arrays.sort(arr, (a, b) -> {
         });
 
 // Method 3
+Arrays.sort(arr, (a, b) -> (b-a));
+
+// Method 4
 Arrays.sort(arr, (a, b) -> b.compareTo(a));
+```
+
+### PriorityQueue自定义
+
+```java
+Queue<Integer> A = new PriorityQueue<>((x, y) -> (y - x)); // 大顶堆
 ```
 
