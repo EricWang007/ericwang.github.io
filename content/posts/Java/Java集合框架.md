@@ -70,6 +70,10 @@ Stack<Integer> queue2 = new Stack<Integer>();
 
 * V put(K key, V value)
 
+### Queue
+
+* boolean offer(E e)
+
 ### Size & Length
 
 * int size()
