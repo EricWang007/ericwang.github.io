@@ -16,7 +16,7 @@ menu:
 
 ---
 
-## 1 Convolutional Neural Networks
+## 1 The Basics of Convolutional Neural Networks
 
 ### 1.1 Edge detection
 
@@ -101,7 +101,7 @@ $$
 
 * Convolution (CONV)
 * Pooling (POOL)
-* Fully connected (FC)
+* Fully connected (FC) 
 
 ### 1.7 Pooling layers
 
@@ -110,4 +110,46 @@ $$
 > only has hyperparameters(fixed), doesn't has parameters.
 
   ![image-20210819122112750](/images/posts/ML/image-20210819122112750.png)
+$$
+n^{[l]}=\bigg\lfloor\frac{n^{[l-1]}+2p^{[l]}-f^{[l]}}{s^{[l]}}+1\bigg\rfloor
+$$
+
+### 1.8 Neural network example
+
+![image-20210828223356588](/images/posts/ML/image-20210828223356588.png)
+
+## 2 Deep Convolutional Models: Case Study
+
+### 2.1 Classic Networks
+
+#### LeNet-5
+
+* trained on grayscale images(灰度图片)
+
+![image-20210829201819663](/images/posts/ML/image-20210829201819663.png)
+
+#### AlexNet
+
+*  Similar to LeNet, but much bigger.
+* $\approx60M$ parameters.
+* Use ReLU
+
+![image-20210829202734063](/images/posts/ML/image-20210829202734063.png)
+
+#### VGG-16
+
+* 共16个layer
+* CONV层的卷积核和POOLING层的格式都是固定的
+* $\approx138M$ parameters.
+* 核VGG-19的表现不相上下
+
+![image-20210829203437393](/images/posts/ML/image-20210829203437393.png)
+
+### 3 Residual Networks (ResNets 残差网络)
+
+#### Residual block
+
+* Add "short cut" (skip connection)
+
+![image-20210829205525706](/images/posts/ML/image-20210829205525706.png)
 
