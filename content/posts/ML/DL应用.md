@@ -32,12 +32,12 @@ menu:
 
 ### 1.2 Bias(偏差)/Variance(方差)
 
-| Test set error | Dev set error | Evaluation                |
-| -------------- | ------------- | ------------------------- |
-| 1%             | 11%           | high variance (过拟合)    |
-| 15%            | 16%           | high bias (欠拟合)        |
-| 15%            | 30%           | high bias & high variance |
-| 0.5%           | 1%            | low bias & low variance   |
+| Train set error | Dev set error | Evaluation                |
+| --------------- | ------------- | ------------------------- |
+| 1%              | 11%           | high variance (过拟合)    |
+| 15%             | 16%           | high bias (欠拟合)        |
+| 15%             | 30%           | high bias & high variance |
+| 0.5%            | 1%            | low bias & low variance   |
 
 .
 
