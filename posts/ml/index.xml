@@ -15,6 +15,7 @@ GAN in Real Life GAN的创始人：Ian Goodfellow GAN的应用领域： Image Ge
 Input features e.g.: RGB pixel values for images
 Generator Use Neural Networks, input: class+noise vector, output: features(image)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Thu, 05 Aug 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
 不同种类的函数：
-Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是parameters： $$ L(b,w) $$
-两种Loss function：
-Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$</description></item></channel></rss>
+Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是Model中的parameters： $$ L(b,w) $$
+Loss function：$L=\frac{1}{N}\sum_ne_n$
+Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$ 1.3 Optimization 目标：得到最优的参数。 $$ w^{}, b^{}=\arg \min _{w, b} L $$ 方式：Gradient Descent
+随机选取初始值$w^0$ 计算$\left.\frac{\partial L}{\partial \mathcal{\imath}}\right|_{w=w^{0}}$ learning rate：$\eta$，表示梯度下降的速率 不断更新w：$w^{1} \leftarrow w^{0}-\left.\eta \frac{\partial L}{\partial w}\right|_{w=w^{0}}$ $$ \begin{aligned} &amp;amp;\left.\frac{\partial L}{\partial w}\right|{w=w^{0}, b=b^{0}} \quad w^{1} \leftarrow w^{0}-\left.</description></item></channel></rss>
