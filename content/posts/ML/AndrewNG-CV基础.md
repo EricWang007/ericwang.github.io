@@ -1,18 +1,18 @@
 ---
 
-title: "CV基础"
+title: "AndrewNG-CV基础"
 date: 2021-08-05T06:00:20+06:00
 hero: /images/posts/writing-posts/hugo-logo.svg
 math: true
 menu:
   sidebar:
-    name: CV基础
-    identifier: CV基础
+    name: AndrewNG-CV基础
+    identifier: AndrewNG-CV基础
     parent: ML
     weight: 10
 ---
 
-# CV 基础
+# AndrewNG-CV 基础
 
 ---
 

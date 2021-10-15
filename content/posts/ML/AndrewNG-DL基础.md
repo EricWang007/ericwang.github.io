@@ -1,18 +1,18 @@
 ---
 
-title: "DL基础"
+title: "AndrewNG-DL基础"
 date: 2021-08-05T06:00:20+06:00
 hero: /images/posts/writing-posts/hugo-logo.svg
 math: true
 menu:
   sidebar:
-    name: DL基础
-    identifier: DL基础
+    name: AndrewNG-DL基础
+    identifier: AndrewNG-DL基础
     parent: ML
     weight: 10
 ---
 
-# Deep Learning 基础
+# AndrewNG-Deep Learning 基础
 
 ---
 

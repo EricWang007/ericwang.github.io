@@ -1,18 +1,18 @@
 ---
 
-title: "DL应用"
+title: "AndrewNG-DL应用"
 date: 2021-08-05T06:00:20+06:00
 hero: /images/posts/writing-posts/hugo-logo.svg
 math: true
 menu:
   sidebar:
-    name: DL应用
-    identifier: DL应用
+    name: AndrewNG-DL应用
+    identifier: AndrewNG-DL应用
     parent: ML
     weight: 10
 ---
 
-# DL 应用
+# AndrewNG-DL 应用
 
 ---
 

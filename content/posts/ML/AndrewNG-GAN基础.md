@@ -1,17 +1,17 @@
 ---
 
-title: "GAN基础"
+title: "AndrewNG-GAN基础"
 date: 2021-08-05T06:00:20+06:00
 hero: /images/posts/writing-posts/hugo-logo.svg
 menu:
   sidebar:
-    name: GAN基础
-    identifier: GAN基础
+    name: AndrewNG-GAN基础
+    identifier: AndrewNG-GAN基础
     parent: ML
     weight: 10
 ---
 
-# GAN
+# AndrewNG-GAN
 
 ---
 
