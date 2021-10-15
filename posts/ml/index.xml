@@ -13,4 +13,8 @@ GANS:
 GAN in Real Life GAN的创始人：Ian Goodfellow GAN的应用领域： Image Generation, Deep fake Text Generation Data Augmentaion Image Filters 1.2 Basic Components Discriminator Use Neural Networks, input: features(image), output: probability
 0.85这个概率也会交给Generator
 Input features e.g.: RGB pixel values for images
-Generator Use Neural Networks, input: class+noise vector, output: features(image)</description></item></channel></rss>
+Generator Use Neural Networks, input: class+noise vector, output: features(image)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Thu, 05 Aug 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
+不同种类的函数：
+Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是parameters： $$ L(b,w) $$
+两种Loss function：
+Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$</description></item></channel></rss>
