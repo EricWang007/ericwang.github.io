@@ -8,11 +8,20 @@ N-fold Cross Validation：将Training Set进行不同的分组，分别对模型
 当有很多参数时，Local Minima几乎不存在。
 2.2 Batch与Momentum Batch Shuffle：在一个epoch重新分batch。 大Batch v.s. 小Batch
 当考虑并行运算（gpu）后，大Batch的运行速度更快。
-小Batch的noise更大，但这反而有助于训练。</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Fri, 15 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
+小Batch的noise更大，但这反而有助于训练。</description></item><item><title>李宏毅-机器学习2021春-3</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-3/</link><pubDate>Sun, 17 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-3/</guid><description>李宏毅-机器学习2021春-3 1 Classification 将Class用one-hot vector表示
+回归与分类的区别：
+softmax：
+Loss的计算：
+2 Convolutional Neural Network (CNN) 3 Self-attention 3.1 背景 当输入是多组向量时，输出的情况：
+每一个向量都有一个label（sequence labeling），用到了self-attention 整个sequence有一个label 模型自己决定输出长度。 3.2 原理 Self-attention：根据a向量之间的关联性，相应的b向量
+解释得到$b^1$的过程：
+●代表dot-product；此处不一定要用soft-max 完整过程：
+3.3 变种 在语音辨识中，用于输入的数据很长，可以用Trancated Self-attention，只考虑每一段音频和周围的一定长度内的音频的关系。</description></item><item><title>李宏毅-机器学习2021春-4</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-4/</link><pubDate>Sun, 17 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-4/</guid><description>李宏毅-机器学习2021春-4 1 Transformer Sequence-to-sequence（Seq2seq）
+输出的长度由模型决定 Encoder+Decoder 1.1 Encoder 1.2 Decoder-Autoregressive(AT)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Fri, 15 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
 不同种类的函数：
 Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是Model中的parameters： $$ L(b,w) $$
 Loss function：$L=\frac{1}{N}\sum_ne_n$
-Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$ 1.3 Optimization 目标：得到最优的参数。 $$ w^{}, b^{}=\arg \min _{w, b} L $$ 方式：Gradient Descent
+Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$ 1.3 Optimization 目标：得到最优的参数。 $$ w^{}, b^{}=arg \min _{w, b} L $$ 方式：Gradient Descent
 一个参数w的情况 随机选取初始值$w^0$ 计算$\left.\frac{\partial L}{\partial \mathcal{\imath}}\right|_{w=w^{0}}$ learning rate：$\eta$，表示梯度下降的速率 不断更新w：$w^{1} \leftarrow w^{0}-\left.\eta \frac{\partial L}{\partial w}\right|_{w=w^{0}}$ 两个参数的情况： 2 深度学习基本概念 2.</description></item><item><title>AndrewNG-CV基础</title><link>https://ericwang007.github.io/posts/ml/andrewng-cv%E5%9F%BA%E7%A1%80/</link><pubDate>Thu, 05 Aug 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/andrewng-cv%E5%9F%BA%E7%A1%80/</guid><description>AndrewNG-CV 基础 1 The Basics of Convolutional Neural Networks 1.1 Edge detection Use filter to do the convolution operation
 One Example Convolution function in tensorflow: tf.nn.conv2d
 Other Examples 1-&amp;gt;-1: light-&amp;gt;dark -1-&amp;gt;1: dark-&amp;gt;light Furthermore, treat the 9 numbers as parameters, and use backward propagation to improve them.
