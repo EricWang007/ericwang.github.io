@@ -10,7 +10,7 @@ mismatch：训练集和测试集的数据分别不同
 N-fold Cross Validation：将Training Set进行不同的分组，分别对模型进行训练和验证，得到的mse取平均值。
 2 类神经网络训练不起来怎么办 2.1 Local Minima与Saddle Point Critical point包括Local Minima与Saddle Point。
 当有很多参数时，Local Minima几乎不存在。
-2.2 Batch与Momentum Batch Shuffle：在一个epoch重新分batch。 大Batch v.s. 小Batch
+2.2 Batch与Momentum Batch Shuffle：在一个epoch结束后重新分batch。 大Batch v.s. 小Batch
 当考虑并行运算（gpu）后，大Batch的运行速度更快。
 小Batch的noise更大，但这反而有助于训练。</p></div><div class=card-footer><span class=float-left>October 17, 2021</span>
 <a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-3/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>李宏毅-机器学习2021春-3</h5><p class="card-text post-summary">李宏毅-机器学习2021春-3 1 Classification 将Class用one-hot vector表示
@@ -18,17 +18,32 @@ N-fold Cross Validation：将Training Set进行不同的分组，分别对模型
 softmax：
 Loss的计算：
 2 Convolutional Neural Network (CNN) 3 Self-attention 3.1 背景 当输入是多组向量时，输出的情况：
-每一个向量都有一个label（sequence labeling），用到了self-attention 整个sequence有一个label 模型自己决定输出长度。 3.2 原理 Self-attention：根据a向量之间的关联性，相应的b向量
+每一个向量都有一个label（sequence labeling），此处可以用self-attention 整个sequence有一个label 模型自己决定输出长度（seq to seq） 3.2 原理 Self-attention的输出$b^1$，既代表$a^1$，又代表$a^1$和$a^2$、$a^3$的关系。
 解释得到$b^1$的过程：
 ●代表dot-product；此处不一定要用soft-max 完整过程：
-3.3 变种 在语音辨识中，用于输入的数据很长，可以用Trancated Self-attention，只考虑每一段音频和周围的一定长度内的音频的关系。</p></div><div class=card-footer><span class=float-left>October 17, 2021</span>
+3.3 Multi-head Self-attention 寻找多种相关性。
+Positional Encoding 为每一个位置设置一个位置向量$e^i$。
+3.4 其它变种 在语音辨识中，用于输入的数据很长，可以用Trancated Self-attention，只考虑每一段音频和周围的一定长度内的音频的关系。
+Self-attention同样可以用于图片。
+。。。
+Self-attention vs CNN 。。。
+Self-attention vs RNN 。。。
+Self-attention for Graph 。。。</p></div><div class=card-footer><span class=float-left>October 17, 2021</span>
 <a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-3/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-4/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>李宏毅-机器学习2021春-4</h5><p class="card-text post-summary">李宏毅-机器学习2021春-4 1 Transformer Sequence-to-sequence（Seq2seq）
-输出的长度由模型决定 Encoder+Decoder 1.1 Encoder 1.2 Decoder-Autoregressive(AT)</p></div><div class=card-footer><span class=float-left>October 17, 2021</span>
+输出的长度由模型决定 Encoder+Decoder 1.1 Encoder encoder内部由许多block组成：
+每个block的构成如下：
+1.2 Decoder-Autoregressive(AT) 与Encoder的对比图：（Multi-Head Attention前加了一个Masked）
+Masked Self-attention 产生$b^1$的时候只能考虑$b^1$的资讯。 产生$b^2$的时候只能考虑$b^1$、$b^2$的资讯。 产生$b^3$的时候只能考虑$b^1$、$b^2$、$b^3$的资讯。 1.3 Encoder-Decoder Cross attention:
+Teacher Forcing: 用ground truth（答案）作为Decoder的输入
+1.4 Training Tips Copy Mechanism Guided Attention Beam Search：不基于贪心的一种搜索算法 2 BERT Self-supervised Learning 系统通过输入数据的一部分进行predict，另一部分输入用于进行比对。
+Masking Input Next Sentence Prediction 对于BERT不是很有用 BERT经过Fine-tune，可用于下游任务。
+BERT整体是Semi-supervised的。填空题（Pre-train）阶段是Self-supervised，Finetune阶段是supervised。
+2.1 Bert Case 用于语义分析。输出类别。BERT是用填空题预训练的。 用于词性标注。输出和输出长度相同。 用于自然语言推测。输入两个句子，输出一个类别。 基于提取的问答系统 输入一个问题和一篇文档，输出答案的起始位置和结束位置。 2.</p></div><div class=card-footer><span class=float-left>October 17, 2021</span>
 <a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-4/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>李宏毅-机器学习2021春-1</h5><p class="card-text post-summary">李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
 不同种类的函数：
 Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是Model中的parameters： $$ L(b,w) $$
 Loss function：$L=\frac{1}{N}\sum_ne_n$
-Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$ 1.3 Optimization 目标：得到最优的参数。 $$ w^, b^=arg min _{w, b} L $$ 方式：Gradient Descent
+Mean Absolute Error(MAE)：$e=|y-\hat{y}|$ Mean Square Error(MSE)：$e=(y-\hat{y})^2$ 1.3 Optimization 目标：得到最优的参数。 $$ w^{*}, b^{*}=\arg \min _{w, b} L $$ 方式：Gradient Descent
 一个参数w的情况 随机选取初始值$w^0$ 计算$\left.\frac{\partial L}{\partial \mathcal{\imath}}\right|_{w=w^{0}}$ learning rate：$\eta$，表示梯度下降的速率 不断更新w：$w^{1} \leftarrow w^{0}-\left.\eta \frac{\partial L}{\partial w}\right|_{w=w^{0}}$ 两个参数的情况： 2 深度学习基本概念 2.</p></div><div class=card-footer><span class=float-left>October 15, 2021</span>
 <a href=/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/ class="float-right btn btn-outline-info btn-sm">Read</a></div></div></a></div><div class=post-card><a href=/posts/ml/andrewng-cv%E5%9F%BA%E7%A1%80/ class=post-card-link><div class=card><div class=card-head><img class=card-img-top src=/images/default-hero.jpg alt="Hero Image"></div><div class=card-body><h5 class=card-title>AndrewNG-CV基础</h5><p class="card-text post-summary">AndrewNG-CV 基础 1 The Basics of Convolutional Neural Networks 1.1 Edge detection Use filter to do the convolution operation
 One Example Convolution function in tensorflow: tf.nn.conv2d
