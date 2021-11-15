@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EricWang's Blog</title><link>https://ericwang007.github.io/</link><description>Recent content on EricWang's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 17 Oct 2021 06:00:20 +0600</lastBuildDate><atom:link href="https://ericwang007.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Resultados de Búsqueda</title><link>https://ericwang007.github.io/search/</link><pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate><guid>https://ericwang007.github.io/search/</guid><description>Este archivo existe únicamente para responder a la URL /search con la plantilla de diseño search relacionada.
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>EricWang's Blog</title><link>https://ericwang007.github.io/</link><description>Recent content on EricWang's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 27 Oct 2021 06:00:20 +0600</lastBuildDate><atom:link href="https://ericwang007.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Resultados de Búsqueda</title><link>https://ericwang007.github.io/search/</link><pubDate>Tue, 08 Jun 2010 08:06:25 +0600</pubDate><guid>https://ericwang007.github.io/search/</guid><description>Este archivo existe únicamente para responder a la URL /search con la plantilla de diseño search relacionada.
 No se muestra ningún contenido aquí, todo el contenido se basa en la plantilla layouts/page/search.html
 Establecer una prioridad muy baja en el mapa del sitio le dirá a los motores de búsqueda que éste no es un contenido importante.
 Esta implementación utiliza Fusejs, jquery y mark.js
@@ -98,7 +98,15 @@ Initial setup Search depends on additional output content type of JSON in config
 No content shown here is rendered, all content is based in the template layouts/page/search.html
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
-Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description></item><item><title>李宏毅-机器学习2021春-2</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</link><pubDate>Sun, 17 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</guid><description>李宏毅-机器学习2021春-2 1 机器学习任务攻略 Model bias：模型过于简单，有局限性
+Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description></item><item><title>李宏毅-机器学习2021春-6</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-6/</link><pubDate>Wed, 27 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-6/</guid><description>李宏毅-机器学习2021春-6 1 GNN 2 Deeep Reinforcement Learning (RL) 当人类也不知道什么是好的输出结果时，可以用RL。
+2.1 RL与机器学习的关系 Step 1 Function with unknown parameters
+用sample产生随机输出 Step 2 Define &amp;ldquo;Loss&amp;rdquo;
+Step 3 Optimization
+2.2 Policy Gradient 加入$A_n$，代表期望执行的程度。
+$\gamma$：learning rate Policy Gradient的步骤：
+On-policy &amp;amp; Off-policy
+On-policy：用于训练的actor和用于交互的actor相同。 Off-policy：用于训练的actor和用于交互的actor不同。如Proximal Policy Optimization (PPO)。 2.3 Actor-Critic Montre-Carlo (MC) based approach Temporal-difference (TD) approach Veresion 3.5
+Version 4 —— Advantage Actor-Critic</description></item><item><title>李宏毅-机器学习2021春-2</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</link><pubDate>Sun, 17 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</guid><description>李宏毅-机器学习2021春-2 1 机器学习任务攻略 Model bias：模型过于简单，有局限性
 Optimization Issue：模型足够复杂了，但Optimization做的不够好。
 Overfitting：在训练集上效果好，在测试集上效果差。解决方法如下：
 增加训练数据，Data augmentation（图片左右翻转） 限制模型，减少模型的flexibility： 减少参数，共享参数（CNN） 减少features Early stopping Regularization Dropout 模型的复杂性需要在Overfitting和Model bias间进行trade-off
@@ -114,7 +122,7 @@ softmax：
 Loss的计算：
 2 Convolutional Neural Network (CNN) 为Image Classification设计的网络。
 默认Image大小为100*100。
-Receptive field（感受野）：图像的一个局部特征 共享参数：w1，w2是相同的 recptive field + sharing parameteres = convolutional layer
+Receptive field（感受野）：图像的一个局部特征 共享参数：w1，w2是相同的 receptive field + sharing parameteres = convolutional layer
 Convolutional layer：由一堆Filter组成，Filter捕捉图片里的pattern。 Feature Map：图片经过Convolution layer得到的结果 Pooling—Max Pooling
 没有参数需要学习
 Spatial Transformer Layer：解决CNN无法面对放大和旋转的问题
@@ -132,7 +140,7 @@ BERT整体是Semi-supervised的。填空题（Pre-train）阶段是Self-supervis
 Counting based
 Prediction based：拿出Prediction Model的第一个hiden layer，即可得到word embedding.
 2 Recurrent Neural Network ​ 有记忆的NN。
-Long Shor-term Mem4ory(LSTM)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Fri, 15 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
+Long Shor-term Memory(LSTM)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Fri, 15 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
 不同种类的函数：
 Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是Model中的parameters： $$ L(b,w) $$
 Loss function：$L=\frac{1}{N}\sum_ne_n$
@@ -148,7 +156,19 @@ Java集合中的TreeSet和TreeMap C++ STL中的set、map Linux虚拟内存的管
 删除</description></item><item><title>知识梳理 2</title><link>https://ericwang007.github.io/posts/os/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-2/</link><pubDate>Fri, 03 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/os/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-2/</guid><description>知识梳理 2 4 CPU调度 基本概念 CPU调度：在主存中选择运行实体（ready queue中的进程/线程），并将CPU分配给它。在内核状态下选择、分配、激活。
 进程执行周期：CPU burst + I/O burst CPU burst：进程在 running state I/O burst：进程在 waiting state 进程调度需要以下两个部件： 短期调度程序（short-term scheduler） 分派程序（dispatcher）：将CPU分配给短期调度程序选择的进程，功能包括 进程上下文切换 转到user mode 跳到用户程序的合适位置重新开始执行 上图中的t0-t3为派遣时延（dispatch latency）
 调度什么时候出现：（1,2为非抢占式，3,4为抢占式）
-进程终止 运行的进程转为waiting状态（e.g., 进程主动I/O requests，或调用wait等待子进程终止） 运行的进程转为ready状态（e.g.，中断出现，或时间戳结束） waiting-&amp;gt;ready（e.g.，I/O完成） 调度准则 调度算法</description></item><item><title>知识梳理 1</title><link>https://ericwang007.github.io/posts/os/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-1/</link><pubDate>Thu, 02 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/os/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-1/</guid><description>知识梳理 1 1 Introduction 计算机启动过程 BIOS -&amp;gt; MBR -&amp;gt; boot loader -&amp;gt; kernel -&amp;gt; init process
+进程终止 运行的进程转为waiting状态（e.g., 进程主动I/O requests，或调用wait等待子进程终止） 运行的进程转为ready状态（e.g.，中断出现，或时间戳结束） waiting-&amp;gt;ready（e.g.，I/O完成） 调度准则 调度算法</description></item><item><title>Part 1</title><link>https://ericwang007.github.io/posts/linux/part-1/</link><pubDate>Thu, 02 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/linux/part-1/</guid><description>Part 1 1 Linux终端与主机 Ctrl-A的ASCII码是1，Ctrl-B的ASCII码是2，Ctrl-C的ASCII码是3，。。。，Ctrl-Z的ASCII码是26
+Esc的ASCII码是27
+行律功能调整：stty
+查看：stty -a stty erase ^H 流控方式：
+硬件方式：RS232接口的CTS信号（Clear To Send）（不好） 软件方式：利用流控字符Xon（Ctrl-S, 17）和Xoff（Ctrl-Q，19） 2 系统状态查看 2.1 用户登录 Linux用户分为：
+root用户（超级用户） 普通用户 创建新用户：
+由root用户创建（useradd命令），用户信息存放在/etc/passwd文件中，包括用户名和用户ID，以及Home目录，登录shell 登录shell：一般为bash，也可以选其它shell，甚至自己设计的程序。 登录后的shell提示符：
+$：Bourne Shell系列（sh，ksh，bash） #：当前用户为超级用户root 2.2 查看手册、时间、计算器、口令维护 Linux命令大小写敏感。
+几种常用的系统命令：
+man：查看系统常用手册
+date：读取系统日期和时间
+cal：日历
+cal 10 2019 cal 2019 bc：计算器</description></item><item><title>SDN 1</title><link>https://ericwang007.github.io/posts/sdn/sdn-1/</link><pubDate>Thu, 02 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/sdn/sdn-1/</guid><description>SDN 1 1 SDN概述 1.1 SDN之前的网络架构 1.2 SDN定义 网络控制和转发功能解耦合，使得网络控制功能可直接编程。 Openflow协议是SDN方案的基础。 SDN的开放分层架构加速了网络产业的参与度，越来越多的网络用户、网络软件公司参与到参与中。 1.3 SDN的分层体系结构</description></item><item><title>知识梳理 1</title><link>https://ericwang007.github.io/posts/os/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-1/</link><pubDate>Thu, 02 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/os/%E7%9F%A5%E8%AF%86%E6%A2%B3%E7%90%86-1/</guid><description>知识梳理 1 1 Introduction 计算机启动过程 BIOS -&amp;gt; MBR -&amp;gt; boot loader -&amp;gt; kernel -&amp;gt; init process
 当我们打开计算机电源，计算机会自动从主板的BIOS(Basic Input/Output System)读取其中所存储的程序。这一程序通常知道一些直接连接在主板上的硬件(硬盘，网络接口，键盘，串口，并口)。现在大部分的BIOS允许你从软盘、光盘或者硬盘中选择一个来启动计算机。 下一步，计算机将从你所选择的存储设备中读取起始的512 bytes。这512 bytes叫做主引导记录MBR (master boot record)。MBR会告诉电脑从该设备的某一个分区(partition)来装载引导加载程序(boot loader)。Boot loader储存有操作系统(OS)的相关信息，比如操作系统名称，操作系统内核 (kernel)所在位置等。 随后，boot loader将kernel加载到内存中。kernel实际上是一个用来操作计算机的程序，它是计算机操作系统的内核，主要的任务是管理计算机的硬件资源，充当软件和硬件的接口。操作系统上的任何操作都要通过kernel传达给硬件。Windows和Linux各自有自己kernel。狭义的操作系统就是指kernel，广义的操作系统包括kernel以及kernel之上的各种应用。 kernel开始加载第一个进程，例如&amp;quot;init&amp;quot;，并等待事件的出现。 事件 中断（interrupt/trap）：由硬件或外设触发，通过系统总线发一个信号给CPU，一般为异步方式。 中断会有一个中断ID。 程序会保存中断发生前一时刻的执行现场（保存一些寄存器中的值），然后去转到中断的服务例程执行中断。 中断完毕后，OS再恢复之前保存的处理状态，故中断是对应用程序透明的。 如：read系统调用后，系统发出读磁盘的操作，当磁盘数据准备好后，向OS发出一个异步通知消息。 异常（exception）：由应用程序触发，一般为同步方式。 异常也有异常编号ID，也会保存现场。 如：除0异常，无效地址访问 系统调用（system call）：由应用程序触发，应用程序向OS请求某个服务，异步或同步。 大多由应用程序通过API调用，而非直接由系统调用 存储结构 I/O 结构 每个设备控制器控制一种设备，负责控制数据在它自己的本地缓存和外部设备中的移动。 OS 为每个设备控制器分配了一个设备驱动器。 DMA（Direct Memory Access）——用于大块数据的移动</description></item><item><title>1 Introduction</title><link>https://ericwang007.github.io/posts/database/1-introduction/</link><pubDate>Mon, 30 Aug 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/database/1-introduction/</guid><description>1 Introduction DBMS &amp;amp; DBS
 DBS：数据库系统 包括：DBMS、数据库、数据库应用程序、数据库管理人员 DBMS：数据库管理系统 对数据的管理包括：定义信息的存储格式、提供操作信息的方法 三级模式结构
 内模式（物理层）：数据如何存储、第层数据结构 逻辑模式（逻辑层）：描述数据库中存的是什么数据，以及这些数据之间的关系，数据库管理人员运用逻辑层的抽象。是一个全局逻辑结构。 外模式（视图层）：数据库用户能够看到的和使用的局部数据的逻辑结构。系统可以为同一个数据库提供多个视图。 逻辑数据独立性：当概念模式变化时，可以不改变外部模式和应用程序。

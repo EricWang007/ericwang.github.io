@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ML on EricWang's Blog</title><link>https://ericwang007.github.io/posts/ml/</link><description>Recent content in ML on EricWang's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 17 Oct 2021 06:00:20 +0600</lastBuildDate><atom:link href="https://ericwang007.github.io/posts/ml/index.xml" rel="self" type="application/rss+xml"/><item><title>李宏毅-机器学习2021春-2</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</link><pubDate>Sun, 17 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</guid><description>李宏毅-机器学习2021春-2 1 机器学习任务攻略 Model bias：模型过于简单，有局限性
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ML on EricWang's Blog</title><link>https://ericwang007.github.io/posts/ml/</link><description>Recent content in ML on EricWang's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 27 Oct 2021 06:00:20 +0600</lastBuildDate><atom:link href="https://ericwang007.github.io/posts/ml/index.xml" rel="self" type="application/rss+xml"/><item><title>李宏毅-机器学习2021春-6</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-6/</link><pubDate>Wed, 27 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-6/</guid><description>李宏毅-机器学习2021春-6 1 GNN 2 Deeep Reinforcement Learning (RL) 当人类也不知道什么是好的输出结果时，可以用RL。
+2.1 RL与机器学习的关系 Step 1 Function with unknown parameters
+用sample产生随机输出 Step 2 Define &amp;ldquo;Loss&amp;rdquo;
+Step 3 Optimization
+2.2 Policy Gradient 加入$A_n$，代表期望执行的程度。
+$\gamma$：learning rate Policy Gradient的步骤：
+On-policy &amp;amp; Off-policy
+On-policy：用于训练的actor和用于交互的actor相同。 Off-policy：用于训练的actor和用于交互的actor不同。如Proximal Policy Optimization (PPO)。 2.3 Actor-Critic Montre-Carlo (MC) based approach Temporal-difference (TD) approach Veresion 3.5
+Version 4 —— Advantage Actor-Critic</description></item><item><title>李宏毅-机器学习2021春-2</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</link><pubDate>Sun, 17 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-2/</guid><description>李宏毅-机器学习2021春-2 1 机器学习任务攻略 Model bias：模型过于简单，有局限性
 Optimization Issue：模型足够复杂了，但Optimization做的不够好。
 Overfitting：在训练集上效果好，在测试集上效果差。解决方法如下：
 增加训练数据，Data augmentation（图片左右翻转） 限制模型，减少模型的flexibility： 减少参数，共享参数（CNN） 减少features Early stopping Regularization Dropout 模型的复杂性需要在Overfitting和Model bias间进行trade-off
@@ -14,7 +22,7 @@ softmax：
 Loss的计算：
 2 Convolutional Neural Network (CNN) 为Image Classification设计的网络。
 默认Image大小为100*100。
-Receptive field（感受野）：图像的一个局部特征 共享参数：w1，w2是相同的 recptive field + sharing parameteres = convolutional layer
+Receptive field（感受野）：图像的一个局部特征 共享参数：w1，w2是相同的 receptive field + sharing parameteres = convolutional layer
 Convolutional layer：由一堆Filter组成，Filter捕捉图片里的pattern。 Feature Map：图片经过Convolution layer得到的结果 Pooling—Max Pooling
 没有参数需要学习
 Spatial Transformer Layer：解决CNN无法面对放大和旋转的问题
@@ -32,7 +40,7 @@ BERT整体是Semi-supervised的。填空题（Pre-train）阶段是Self-supervis
 Counting based
 Prediction based：拿出Prediction Model的第一个hiden layer，即可得到word embedding.
 2 Recurrent Neural Network ​ 有记忆的NN。
-Long Shor-term Mem4ory(LSTM)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Fri, 15 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
+Long Shor-term Memory(LSTM)</description></item><item><title>李宏毅-机器学习2021春-1</title><link>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</link><pubDate>Fri, 15 Oct 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/ml/%E6%9D%8E%E5%AE%8F%E6%AF%85-%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A02021%E6%98%A5-1/</guid><description>李宏毅-机器学习2021春-1 1 机器学习基本概念 1.1 机器学习基本任务 机器学习的基本任务：寻找一个函数
 不同种类的函数：
 Regression（回归）：函数输出一个标量 如：预测PM2.5 Clssificatiion（分类）：给定选项，函数输出选项 如：Alpha Go下棋 Structured Learning：创造一些结构（图片，文件） 1.2 通过训练数据定义Loss Loss 也是一个函数，它的输入是Model中的parameters： $$ L(b,w) $$
 Loss function：$L=\frac{1}{N}\sum_ne_n$

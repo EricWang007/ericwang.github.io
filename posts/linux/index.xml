@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Linux on EricWang's Blog</title><link>https://ericwang007.github.io/posts/linux/</link><description>Recent content in Linux on EricWang's Blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Thu, 02 Sep 2021 06:00:20 +0600</lastBuildDate><atom:link href="https://ericwang007.github.io/posts/linux/index.xml" rel="self" type="application/rss+xml"/><item><title>Part 1</title><link>https://ericwang007.github.io/posts/linux/part-1/</link><pubDate>Thu, 02 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/linux/part-1/</guid><description>Part 1 1 Linux终端与主机 Ctrl-A的ASCII码是1，Ctrl-B的ASCII码是2，Ctrl-C的ASCII码是3，。。。，Ctrl-Z的ASCII码是26
+Esc的ASCII码是27
+行律功能调整：stty
+查看：stty -a stty erase ^H 流控方式：
+硬件方式：RS232接口的CTS信号（Clear To Send）（不好） 软件方式：利用流控字符Xon（Ctrl-S, 17）和Xoff（Ctrl-Q，19） 2 系统状态查看 2.1 用户登录 Linux用户分为：
+root用户（超级用户） 普通用户 创建新用户：
+由root用户创建（useradd命令），用户信息存放在/etc/passwd文件中，包括用户名和用户ID，以及Home目录，登录shell 登录shell：一般为bash，也可以选其它shell，甚至自己设计的程序。 登录后的shell提示符：
+$：Bourne Shell系列（sh，ksh，bash） #：当前用户为超级用户root 2.2 查看手册、时间、计算器、口令维护 Linux命令大小写敏感。
+几种常用的系统命令：
+man：查看系统常用手册
+date：读取系统日期和时间
+cal：日历
+cal 10 2019 cal 2019 bc：计算器</description></item></channel></rss>
