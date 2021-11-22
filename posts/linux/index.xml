@@ -10,4 +10,9 @@ $：Bourne Shell系列（sh，ksh，bash） #：当前用户为超级用户root 
 man：查看系统常用手册
 date：读取系统日期和时间
 cal：日历
-cal 10 2019 cal 2019 bc：计算器</description></item></channel></rss>
+cal 10 2019 cal 2019 bc：计算器</description></item><item><title>Part 2</title><link>https://ericwang007.github.io/posts/linux/part-2/</link><pubDate>Thu, 02 Sep 2021 06:00:20 +0600</pubDate><guid>https://ericwang007.github.io/posts/linux/part-2/</guid><description>Part 2 1 正则表达式 1.1 基础 正则表达式与文件匹配符规则不同。
+六个元字符：. * $ ^ [ \
+. 代表任意字符 x* 代表任意多个x（0-n个） 123$ 代表匹配文件行尾的123 ^123 代表匹配每行起始的123 []用于定义区间 \1 \2代表前面的第一部分和第二部分 定义集和
+ERE、PCRE：扩展的正则表达式 1.2 跟正则表达式相关的命令 grep/egrep/fgrep
+语法：grep 模式 文件名列表 egrep：用扩展正则表达式搜索 fgrep：快速搜索字符串，不用正则表达式规则 sed：流编辑
+awk：逐行扫描进行文本处理的一门语言</description></item></channel></rss>
